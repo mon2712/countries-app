@@ -1,12 +1,16 @@
 import React from 'react';
+import { ApolloProvider } from '@apollo/client';
 
 import Routes from 'routes';
+import client from 'client';
 
 const App = (): React.ReactElement => {
     return (
-        <div className="App">
-            <Routes />
-        </div>
+        <ApolloProvider client={client}>
+            <div className="App">
+                <Routes />
+            </div>
+        </ApolloProvider>
     );
 };
 
