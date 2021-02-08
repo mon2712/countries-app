@@ -5,22 +5,25 @@ export const COUNTRIES = gql`
         Country(first: $first, offset: $offset, filter: $filter) {
             _id
             name
+            capital
+            population
             location {
                 latitude
                 longitude
             }
             flag {
+                _id
                 emoji
                 emojiUnicode
                 svgFile
             }
             officialLanguages {
-                iso639_1
-                iso639_2
+                _id
                 name
                 nativeName
             }
             currencies {
+                _id
                 name
                 code
                 symbol
