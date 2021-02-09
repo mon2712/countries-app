@@ -53,7 +53,7 @@ const CountriesFilters = (
             initialValues={initialValues}
             render={({ handleSubmit }: FormRenderProps) => {
                 return (
-                    <FormContainer onSubmit={handleSubmit}>
+                    <FormContainer id="form-filters" onSubmit={handleSubmit}>
                         <Grid container spacing={3}>
                             <Grid item md={4} lg={4}>
                                 <Select

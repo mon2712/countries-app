@@ -6,7 +6,7 @@ import { Country, Currency, Language, Region } from 'models';
 export default CountryList;
 
 export type CountryListProps = RouteComponentProps & {
-    className: string;
+    className?: string;
 };
 
 export interface CountryData {

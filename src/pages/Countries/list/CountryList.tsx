@@ -100,7 +100,7 @@ const CountryList = (props: CountryListProps): React.ReactElement | null => {
     if (loading) {
         return (
             <Page title="Countries List">
-                <Typography variant="h1">Countries List</Typography>
+                <Typography variant="h1">Loading...</Typography>
                 <Loader />
             </Page>
         );
