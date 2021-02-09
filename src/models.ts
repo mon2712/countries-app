@@ -30,6 +30,18 @@ export interface Country {
         longitude: number;
         latitude: number;
     };
+    subregion?: {
+        _id: string;
+        name: string;
+        region: {
+            name: string;
+        };
+    };
+    timezones?: {
+        _id: string;
+        name: string;
+    }[];
+    callingCodes?: string[];
     officialLanguages?: Language[];
     population: number;
     currencies?: Currency[];
