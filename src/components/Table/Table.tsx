@@ -132,11 +132,11 @@ class MuiVirtualizedTable extends React.PureComponent<MuiVirtualizedTableProps> 
                     <Table
                         height={height}
                         width={width}
-                        rowHeight={rowHeight!}
+                        rowHeight={rowHeight || 0}
                         gridStyle={{
                             direction: 'inherit',
                         }}
-                        headerHeight={headerHeight!}
+                        headerHeight={headerHeight || 0}
                         className={classes.table}
                         {...tableProps}
                         rowClassName={this.getRowClassName}
