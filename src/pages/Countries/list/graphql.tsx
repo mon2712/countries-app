@@ -1,33 +1,25 @@
 import { gql } from '@apollo/client';
 
+import { fragments } from './fragments';
+
 export const COUNTRIES = gql`
     query GetCountriesList($first: Int, $offset: Int, $filter: _CountryFilter) {
         Country(first: $first, offset: $offset, filter: $filter) {
+            ...CountryAttributes
+        }
+        Currency {
             _id
             name
-            capital
-            population
-            location {
-                latitude
-                longitude
-            }
-            flag {
-                _id
-                emoji
-                emojiUnicode
-                svgFile
-            }
-            officialLanguages {
-                _id
-                name
-                nativeName
-            }
-            currencies {
-                _id
-                name
-                code
-                symbol
-            }
+            code
+        }
+        Language {
+            _id
+            name
+        }
+        Region {
+            _id
+            name
         }
     }
+    ${fragments.country}
 `;
