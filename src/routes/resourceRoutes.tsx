@@ -67,9 +67,9 @@ export default function makeRoutes(): RouteComponentProps {
     });
 
     const routes: RouteComponentProps = routeDescriptors.map(
-        (rD: RouteProps & { key: string }) => (
+        (rD: RouteProps, index: number) => (
             <Route
-                key={rD.key}
+                key={index}
                 exact={rD.exact}
                 path={rD.path}
                 component={rD.component}
