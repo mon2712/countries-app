@@ -1,5 +1,6 @@
 import React, { ReactNode, ReactElement } from 'react';
 
+import { PageContainer } from './Page.styles';
 import { Helmet } from 'react-helmet';
 
 type PageProps = {
@@ -12,7 +13,7 @@ const Page = ({ title, children }: PageProps): ReactElement => (
         <Helmet>
             <title>{title || null}</title>
         </Helmet>
-        {children}
+        <PageContainer>{children}</PageContainer>
     </>
 );
 
